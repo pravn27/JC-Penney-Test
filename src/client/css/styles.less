@@ -1,0 +1,297 @@
+/*
+* @Author Naveen N
+* @date 27/08/16
+*/
+
+
+
+/*
+* Default/General  configs
+*/
+@borderColor:1px solid #E8E8E8;
+@borderRadius:2px;
+@titleColor:#0dafe0;
+@fontSize:20px;
+@buttonColor:#499aec;
+@white : #fff;
+@containerWidth:100%;
+@errorColor:red;
+//buttonvolor #0f7ae8,#3f9cfb
+
+
+
+//Grid Layout Calculations -  12 column = 100% 1 column = 8.33%//
+
+
+
+
+//Grid Layout Calculation Ends//
+
+
+
+
+/****** RESPONSIVENESS STARTS *****/
+@media (max-width: 599px) {
+  @default:24.5%;
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  @default:16.66%;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  @default:8.33%;
+}
+
+@media (min-width: 1200px) {
+  @default:8.33%;
+
+}
+/****** RESPONSIVENESS ENDS *****/
+
+/******GENERIC CSS STARTS *****/
+*{
+  font-family:'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.7
+}
+
+body{
+  background: #efefef;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a{
+  color:#ccc;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.alignRight {
+  float: right;
+}
+
+.italicize {
+  font-style: italic;
+}
+
+.leftColumn {
+  float: left;
+}
+
+.rightColumn {
+  float:right;
+}
+
+.clear {
+  clear: both;
+}
+
+.error {
+  color:@errorColor;
+}
+
+/******GENERIC CSS ENDS *****/
+
+
+.rating{
+   color: #a9a9a9;
+   margin: 0;
+   padding: 0;
+ }
+
+
+
+ ul.rating {
+   display: inline-block;
+ }
+
+ .rating li {
+   list-style-type: none;
+   display: inline-block;
+   padding: 1px;
+   text-align: center;
+   font-weight: bold;
+   cursor: pointer;
+ }
+
+ .rating  {
+   .filled {
+      color: #FF9800;
+   }
+ }
+
+
+ /* The Modal (background) */
+ .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     padding-top: 100px; /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+
+ /* Modal Content */
+ .modal-content {
+     background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%;
+ }
+
+ /* The Close Button */
+ .close {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+
+     &:hover,&:focus {
+       color: #000;
+       text-decoration: none;
+       cursor: pointer;
+     }
+ }
+
+
+/* Full width container*/
+.row {
+  width: 100%;
+  margin-bottom: .5em;
+   &:before,
+   &:after {
+     content: " ";
+     display: table;
+   }
+   &:after {
+     clear: both;
+   }
+}
+
+
+
+// Mixin check //
+
+
+
+//Mixin check ends//
+
+@default:8.33%;
+.column(@numCol) {
+	float: left;
+	width: (@default * @numCol)*1%;
+}
+
+/* Setting column widths */
+.spanWidth1 {
+  .column(1);
+}
+
+.spanWidth2 {
+  .column(2);
+}
+.spanWidth3 {
+  .column(3);
+}
+.spanWidth4 {
+  .column(4);
+}
+.spanWidth5 {
+  .column(5);
+}
+.spanWidth6 {
+  .column(6);
+}
+.spanWidth7 {
+  .column(7);
+}
+.spanWidth8 {
+  .column(8);
+}
+.spanWidth9 {
+  .column(9);
+}
+.spanWidth10 {
+  .column(10);
+}
+.spanWidth11 {
+  .column(11);
+}
+.spanWidth12 {
+  .column(12);
+}
+
+
+
+/******COMMENT B  OX STARTS *****/
+
+.container {
+  width: @containerWidth;
+  //margin: 0 auto;
+}
+
+.commentBoxWrapper {
+  width:90%;
+  border:@borderColor;
+  border-radius:@borderRadius;
+  background-color:@white;
+  margin: 0 auto;
+  padding: 25px;
+  margin-top: .5em;
+}
+
+.commentTitle {
+  color:@titleColor;
+  font-size: @fontSize;
+  border-bottom: @borderColor;
+}
+
+.commentTitleReview {
+    font-weight: bold;
+}
+
+.commentsortBy {
+  background: none;
+  padding: 4px;
+}
+
+.button {
+  background: @buttonColor;
+  border:none;
+  color:@white;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bolder;
+  border-radius: @borderRadius;
+}
+
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.says {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color:#6B6B6B;
+  vertical-align: Top;
+  display: block;
+}
+
+/******COMMENT BOX ENDS *****/
